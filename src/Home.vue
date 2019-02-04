@@ -14,7 +14,7 @@ export default {
  },
  methods:{
      changeStatus(){
-         this.status='kita';
+         this.$store.state.counter++
      }
  }
 }
