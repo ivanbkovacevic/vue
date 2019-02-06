@@ -1,19 +1,23 @@
 <template>
     <div>
-      <app-test></app-test>
-      <router-view></router-view>
+      <Counter1 />
+      <Counter2 />
+     
     </div>
 </template>
 
 <script>
-import Test from './test.vue'
+import Counter1 from './components/Counter1.vue'
+import Counter2 from './components/Counter2.vue'
+
 export default {
   components:{
-    appTest:Test
+    Counter1:Counter1,
+    Counter2:Counter2
   },
  data:function(){
    return {
-     status:'statufffffffffffffffs'
+     status:'statuffffffffffs'
    }
  }
 }
