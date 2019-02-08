@@ -8,16 +8,19 @@ export const store= new Vuex.Store({
         counter:5
     },
     getters:{
-        counterMilion:state=>{
-            let Sale=state.counter+=1000000;
+        counter3:state=>{
+            let Sale=state.counter+=3;
             return Sale;
         }
     },
     mutations:{
-       counterBy11:(state,payload)=>{
+       counterBy4:(state,payload)=>{
            state.counter+=payload;
        },
-       counterBy51:(state,payload)=>{
+       counterBy5:(state,payload)=>{
+        state.counter+=payload;
+    },
+       counterBy100:(state,payload)=>{
         state.counter+=payload;
     }
 
@@ -25,7 +28,7 @@ export const store= new Vuex.Store({
     actions:{
         akcija100:(context,payload)=>{
             setTimeout(() => {
-                context.commit('counterBy51',payload)
+                context.commit('counterBy100',payload)
             },2000);
         }
     }
